@@ -40,7 +40,7 @@ export function Home() {
     }
 
     history.push(`/rooms/${roomCode}`);
-  }
+  } // Verificação se a sala existe antes do usuário entrar
 
   return (
     <div id="page-auth">
