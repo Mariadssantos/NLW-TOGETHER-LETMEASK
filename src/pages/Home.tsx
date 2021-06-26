@@ -39,6 +39,11 @@ export function Home() {
       return;
     }
 
+    if (roomRef.val().endedAt) {
+      alert("Room already closed.");
+      return;
+    }
+
     history.push(`/rooms/${roomCode}`);
   } // Verificação se a sala existe antes do usuário entrar
 
@@ -55,8 +60,11 @@ export function Home() {
 
       <main>
         <div className="main-content">
-          <div>  <img src={LogoImg} alt="Letmeask" /> </div>
-        
+          <div>
+            {" "}
+            <img src={LogoImg} alt="Letmeask" />{" "}
+          </div>
+
           <button onClick={handleCreateRoom} className="create-room">
             <img src={googleIconImg} alt="Logo da Google" />
             Crie sua sala com o Google
