@@ -1,6 +1,7 @@
 import { FormEvent, useEffect } from "react";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
+
 
 import logoImg from "../assets/images/logo.svg";
 import { Button } from "../components/Button";
@@ -18,11 +19,19 @@ type RoomParams = {
 
 export function Room() {
   const { user } = useAuth();
+  const history = useHistory();
   const params = useParams<RoomParams>();
   const [newQuestion, setNewQuestion] = useState("");
   const roomId = params.id;
 
   const { title, questions } = useRoom(roomId);
+
+
+  async function handleGetOutRoom() {
+    await database.ref(`rooms/${roomId}`).update({});
+
+    history.push("/");
+  }
 
   async function handleSendQuestion(event: FormEvent) {
     event.preventDefault();
@@ -71,6 +80,8 @@ export function Room() {
         <div className="content">
           <img src={logoImg} alt="Letmeask" />
           <RoomCode code={roomId} />
+
+          <button className="button-end" onClick={handleGetOutRoom}>Sair da sala </button>
         </div>
       </header>
 
