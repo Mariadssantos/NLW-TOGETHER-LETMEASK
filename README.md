@@ -3,11 +3,6 @@
 =======
 # NLW-TOGETHER-LETMEASK
 
-<header style={justifiy-content: center;}> 
-<img src='./src/assets/images/logo-dark.svg' alt="Logo letmeask"/>
-</header>
-
-<br></br>
 
 <h1> Next Level Week #06 - Letmeask </h1>
 <br></br>
