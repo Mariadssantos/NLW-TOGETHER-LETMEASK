@@ -4,11 +4,9 @@
   font-weight: 500;
   // background: #835afd;
 
-  background-color: #FF3CAC;
-  background-image:  linear-gradient(139.44deg, #485BFF 0%, #FF59F8 96.19%);
+  background-color: #ff3cac;
+  background-image: linear-gradient(139.44deg, #485bff 0%, #ff59f8 96.19%);
   // linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
- 
-
 
   color: #fff;
   padding: 0 32px;
@@ -27,9 +25,16 @@
   }
 
   &.outlined {
-    background: #835afd ;
+    background: #835afd;
     border: 1px solid #835afd;
     color: #fff;
+
+    @media (max-width: 600px) {
+      width: 45%;
+      margin-right: 10px;
+    }
+
+    
   }
 
   &:not(:disabled):hover {
@@ -40,4 +45,12 @@
     opacity: 0.6;
     cursor: not-allowed;
   }
+
+  @media (max-width: 600px) {
+    width: 40%;
+    height: 35px;
+    font-size: 13px;
+  }
+
+  
 }

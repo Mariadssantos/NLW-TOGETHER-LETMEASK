@@ -17,8 +17,6 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-
-  
   }
 
   span {
@@ -29,5 +27,13 @@
     width: 230px;
     font-size: 14px;
     font-weight: 500;
+  }
+
+  @media (max-width: 600px) {
+    width: 45px;
+  }
+
+  @media (max-width: 375px) {
+    margin-left: 70px;
   }
 }

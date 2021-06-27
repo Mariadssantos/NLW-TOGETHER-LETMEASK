@@ -128,6 +128,7 @@ export function AdminRoom() {
                       onClick={() => handleCheckQuestionAsAnswerd(question.id)}
                     >
                       <img
+                        className="no-questions"
                         src={checkImg}
                         alt="Marcar a pergunta como respondida"
                       />

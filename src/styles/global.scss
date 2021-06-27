@@ -31,3 +31,19 @@ body, input, button, textarea {
     font-size: 80%;
   }
 }
+
+@media (max-width: 1024px){
+  html {
+    font-size: 50%;
+  
+  }
+}
+
+@media (max-width: 768px){
+  html {
+    font-size: 10%;
+  
+  }
+}
+
+

@@ -16,6 +16,10 @@
 
       padding: 120px 80px;
 
+      @media(max-width:630px){
+          display: none;
+      }
+
       img {
           max-width: 320px;
       }
@@ -24,6 +28,11 @@
           font: 700 36px 'Poppins', sans-serif;
           line-height: 42px;
           margin-top: 16px;
+
+          @media(max-width:600px){
+            align-items: center;
+             
+         }
       }
 
       p {
@@ -41,6 +50,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media(max-width:630px){
+        width: 800px;
+        flex-direction: column;
+        
+    }
+
+
   }
 
   .main-content {
@@ -50,6 +67,11 @@
       max-width: 320px;
       align-items: stretch;
       text-align: center;
+
+      @media(max-width:630px){
+       gap: 30px;
+        
+    }
 
       > img {
          
@@ -138,3 +160,4 @@
       }
   }
 }
+
