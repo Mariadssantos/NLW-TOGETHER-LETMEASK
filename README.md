@@ -3,25 +3,31 @@
 =======
 # NLW-TOGETHER-LETMEASK
 
-<header> 
+<header style={align-itens: center;}> 
 <img src='./src/assets/images/logo-dark.svg' alt="Logo letmeask"/>
 </header>
-<nav>
+
+<nav style={display: flex; justify-content:center; }>
 <a>Apresentação</a>
 <a>Tecnologias</a>
 <a>Implementações</a>
 </nav>
-<strong >Next Level Week #06  </strong>
-<br></br>
-
-<img src='/src/assets/images/imgLoginLetmeask.PNG' alt="Imagem da página de login ">
 
 <br></br>
-<p>SALAS DE Q&A PARA SUAS LIVES</p>
 
-<h1>O projeto consiste em uma sala de perguntas para stremears.</h1>
-<p> A NLW #06 trouxe nessa edição um conteúdo mais voltado para o uso da ferramenta Firebase, mais especificamente para as funções de autenticação do usuário com o Google e o banco de dados realtime database. 
-</p>
+<h1> Next Level Week #06 - Letmeask </h1>
+<br></br>
+
+<img src='/src/assets/images/imgLetmeask.PNG' alt="Imagem da página de login ">
+
+<br></br>
+
+<h2>LETMEASK - SALAS DE Q&A PARA SUAS LIVES</h2>
+
+<h3>O projeto consiste em uma sala de perguntas para stremears.
+A NLW #06 trouxe nessa edição um conteúdo mais voltado para o uso da ferramenta Firebase, mais especificamente para as funções de autenticação do usuário com o Google e o banco de dados realtime database. 
+</h3>
+
 
 <br></br>
 
