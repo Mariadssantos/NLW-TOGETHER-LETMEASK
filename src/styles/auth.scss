@@ -7,7 +7,7 @@
   aside {
       flex: 6;
 
-      background: #835afd;
+      background: #000000; 
       color: #FFF;
 
       display: flex;
@@ -29,18 +29,18 @@
       p {
           font-size:24px;
           line-height: 32px;
-          margin-top: 16px;
+          margin-top: 20px;
           color: #f8f8f8;
       }
   }
 
   main {
-      flex: 8;
-
-      padding: 0 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    flex: 8;
+    background: #101010;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .main-content {
@@ -52,10 +52,21 @@
       text-align: center;
 
       > img {
+         
           align-self: center
+          
+      }
+      > h2{
+          margin-bottom: 16px;
+          font-weight: 500;
+      }
+
+      > p {
+          margin-top: 16px;
       }
 
       form {
+
           input{
               height: 50px;
               border-radius: 8px;
@@ -80,7 +91,7 @@
          height: 50px;
          border-radius: 8px;
          font-weight: 500;
-        background: #ea4335;
+        background: rgba(0, 0, 0, 0);
         color: #fff;
     
          display: flex;
@@ -88,7 +99,7 @@
          align-items: center;
     
          cursor: pointer;
-         border: 0;
+         border: 1px solid #fff;
     
          transition: filter 0.2s;
     

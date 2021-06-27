@@ -2,8 +2,9 @@ import { FormEvent, useEffect } from "react";
 import { useState } from "react";
 import { useParams, useHistory } from "react-router-dom";
 
+import noQuestions from "../assets/images/noQuestionsImg.svg";
+import logoImg from "../assets/images/logo-dark.svg";
 
-import logoImg from "../assets/images/logo.svg";
 import { Button } from "../components/Button";
 import { Question } from "../components/Question";
 import { RoomCode } from "../components/RoomCode";
@@ -25,7 +26,6 @@ export function Room() {
   const roomId = params.id;
 
   const { title, questions } = useRoom(roomId);
-
 
   async function handleGetOutRoom() {
     await database.ref(`rooms/${roomId}`).update({});
@@ -81,7 +81,9 @@ export function Room() {
           <img src={logoImg} alt="Letmeask" />
           <RoomCode code={roomId} />
 
-          <button className="button-end" onClick={handleGetOutRoom}>Sair da sala </button>
+          <button className="button-end" onClick={handleGetOutRoom}>
+            Sair da sala{" "}
+          </button>
         </div>
       </header>
 
@@ -119,6 +121,12 @@ export function Room() {
         {/* percorrendo o array e retornando cada item desse array como um componente com o map */}
 
         <div className="question-list">
+          {questions.length <= 0 && (
+            <div className="no-questions">
+              <img src={noQuestions} alt="não há perguntas nessa sala ainda" />
+            </div>
+          )}
+
           {questions.map((question) => {
             return (
               <Question

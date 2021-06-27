@@ -3,9 +3,10 @@ import { useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 
 import deleteImg from "../assets/images/delete.svg";
-import logoImg from "../assets/images/logo.svg";
+import logoImg from "../assets/images/logo-dark.svg";
 import answerImg from "../assets/images/answer.svg";
 import checkImg from "../assets/images/check.svg";
+import noQuestionsAdmin from "../assets/images/noQuestionsAdmin.svg";
 
 import { Button } from "../components/Button";
 import { Question } from "../components/Question";
@@ -102,6 +103,15 @@ export function AdminRoom() {
 
         {/* percorrendo o array e retornando cada item desse array como um componente com o map */}
         <div className="question-list">
+          {questions.length <= 0 && (
+            <div className="no-questions">
+              <img
+                src={noQuestionsAdmin}
+                alt="não há perguntas nessa sala ainda"
+              />
+            </div>
+          )}
+
           {questions.map((question) => {
             return (
               <Question

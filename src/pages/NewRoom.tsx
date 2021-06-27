@@ -2,7 +2,7 @@ import { Link, useHistory } from "react-router-dom";
 import { FormEvent, useState } from "react";
 
 import illustrationImg from "../assets/images/illustration.svg";
-import LogoImg from "../assets/images/logo.svg";
+import LogoImg from "../assets/images/logo-dark.svg";
 import googleIconImg from "../assets/images/google-icon.svg";
 
 import { Button } from "../components/Button";
